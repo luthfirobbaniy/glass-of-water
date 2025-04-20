@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 64px 0 0 0;
+}
+
+h3, p {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+}
+
+.glass {
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  width: 240px;
+  height: 320px;
+  border: 2px solid black;
+  border-radius: 0 0 32px 32px;
+  margin: 48px auto 0 auto; /* Can hidden */
+}
+
+.glass::after {
+  position: absolute;
+  top: 288px;
+  background-color: #B0E7FF;
+  transition: top 1s linear;
+  content: "";
+  width: 240px;
+  height: 320px;
+  border-top: 2px solid black;
+}
+
+.glass:active:after {
+  top: 32px;
+}
+
+.text-container {
+  text-align: center;
+  margin: 36px 0 0 0;
+}
+
+h3 {
+  color: #BFBFBF;
+}
+
+p {
+  color: #404040;
+  margin: 8px 0 0 0;
+}
